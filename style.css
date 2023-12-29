@@ -20,6 +20,15 @@ a{
     color: #000;
 }
 
+iframe {
+    overflow-clip-margin: content-box !important;
+    overflow: clip !important;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
 .game-container{
     border: 2px solid #0082be;
     border-radius: 1px;
