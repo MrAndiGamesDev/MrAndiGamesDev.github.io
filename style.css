@@ -12,6 +12,14 @@ body{
     background-color: #00AFFF;
 }
 
+a:hover{
+    color: #424242;
+}
+
+a{
+    color: #000;
+}
+
 .game-container{
     border: 2px solid #0082be;
     border-radius: 1px;
