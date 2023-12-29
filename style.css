@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@600&display=swap');
+
+body{
+    font-family: 'Fredoka', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100vh;
+    animation: appear 0.15s;
+    background-color: #00AFFF;
+}
+
+.game-container{
+    border: 2px solid #0082be;
+    border-radius: 1px;
+    animation: appear 0.365s;
+    width: 322px;
+    height: 320px;
+    overflow: hidden;
+}
+
+.grid{
+    animation: appear 0.365s;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.cell{
+    width: 77px;
+    height: 77px;
+    background-color: #007db8;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.score-container{
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.cell[data-value="2"]{
+    animation: appear 0.11s;
+    background-color: #ffc0cb;
+}
+
+.cell[data-value="4"]{
+    animation: appear 0.11s;
+    background-color: #add8e6;
+}
+
+.cell[data-value="8"]{
+    animation: appear 0.11s;
+    background-color: #98fb98;
+}
+
+.cell[data-value="16"]{
+    animation: appear 0.11s;
+    background-color: #ffd700;
+}
+
+.cell[data-value="32"]{
+    animation: appear 0.11s;
+    background-color: #ffa07a;
+}
+
+.cell[data-value="64"]{
+    animation: appear 0.11s;
+    background-color: #87ceeb;
+}
+
+.cell[data-value="128"]{
+    animation: appear 0.11s;
+    background-color: #ffff00;
+}
+
+.cell[data-value="256"]{
+    animation: appear 0.11s;
+    background-color: #40e0d0;
+}
+
+.cell[data-value="512"]{
+    animation: appear 0.11s;
+    background-color: #ff69b4;
+}
+
+.cell[data-value="1024"]{
+    animation: appear 0.11s;
+    background-color: #7b68ee;
+}
+
+.cell[data-value="2048"]{
+    animation: appear 0.11s;
+    background-color: #ff6347;
+}
+
+.cell[data-value="4096"]{
+    animation: appear 0.11s;
+    background-color: #a9a9a9;
+}
+
+.cell[data-value="8192"]{
+    animation: appear 0.11s;
+    background-color: #834545;
+}
+
+#restart-btn{
+    font-family: 'Fredoka', sans-serif;
+    animation: appear 0.365ss;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background-color: #f4f4f4;
+    border: none;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+#game-over{
+    font-family: 'Fredoka', sans-serif;
+    position: absolute;
+    border-radius: 1px;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-cell[data-value]{
+    animation: appear 0.365ss;
+    transition: transform 0.35s, background-color 0.35s;
+}
+
+.new-tile{
+    animation: appear 0.7s;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
