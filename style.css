@@ -140,7 +140,7 @@ button:hover{
     background-color: #834545;
 }
 
-#restart-btn{
+restart-btn{
     font-family: 'Fredoka', sans-serif;
     margin-top: 15px;
     padding: 10px 15px;
@@ -150,7 +150,7 @@ button:hover{
     transition: all 0.6s ease;
 }
 
-#restart-btn:hover{
+restart-btn:hover{
     background-color: #7b7b7b;
 }
 
@@ -171,7 +171,7 @@ button:hover{
 }
 
 .grid-cell[data-value]{
-    animation: appear 0.365ss;
+    animation: appear 0.365s;
     transition: transform 0.35s, background-color 0.35s;
 }
 
