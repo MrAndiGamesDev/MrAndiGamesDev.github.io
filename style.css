@@ -142,7 +142,6 @@ button:hover{
 
 #restart-btn{
     font-family: 'Fredoka', sans-serif;
-    animation: appear 0.365ss;
     margin-top: 15px;
     padding: 10px 15px;
     background-color: #a6a6a6;
