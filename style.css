@@ -6,11 +6,6 @@
     box-sizing: border-box;
 }
 
-:root {
-	--cyan: #5decff;
-	--blue: #007cad;
-}
-
 body{
     overflow: hidden;
     color: #fff;
@@ -22,7 +17,7 @@ body{
     width: 100%;
     min-height: 100vh;
     backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
+    /* -webkit-backdrop-filter: blur(1px); */
     pointer-events: none;
 }
 
@@ -165,53 +160,11 @@ body{
     animation: animBack 6s linear infinite;
 }
 
-h1 {
-	text-align: center;
-}
-
-@media (min-width: 600px) {
-	.links p {
-		display: grid;
-		grid-template-columns: 12ch calc(100% - 12ch);
-		margin-left: 12px;
-		margin: 8px 0px;
-	}
-}
-
-@media (max-width: 940px) {
-	body {
-		margin-top: 0px;
-	}
-}
-
-/* Animation code was kindly supplied by paradox - github.com/safinsingh */
-.gradient {
-	background: linear-gradient(
-		to right,
-		var(--cyan),
-		var(--blue),
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: rainbow 5s ease infinite;
-	background-size: 400% 100%;
-}
-
-@keyframes rainbow {
-	0%,
-	100% {
-		background-position: 0 0;
-	}
-	50% {
-		background-position: 100% 0;
-	}
-}
-
-/* dark mode */
-@media (prefers-color-scheme:dark) {
-	:root {
-		--cyan: #5decff;
-		--blue: #007cad;
-	}
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
 }
