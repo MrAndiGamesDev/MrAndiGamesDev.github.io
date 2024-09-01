@@ -1,7 +1,7 @@
 var Loading;
         
 function Intro() {
-  Loading = setTimeout(showPage, 3000);
+  Loading = setTimeout(showPage, 3250);
 }
 
 function showPage() {
