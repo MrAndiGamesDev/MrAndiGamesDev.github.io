@@ -8,7 +8,7 @@
 
 :root {
 	--cyan: #5decff;
-	--blue: #00b7ff;
+	--blue: #007cad;
 }
 
 body{
@@ -22,7 +22,7 @@ body{
     width: 100%;
     min-height: 100vh;
     backdrop-filter: blur(1px);
-    /* -webkit-backdrop-filter: blur(1px); */
+    -webkit-backdrop-filter: blur(1px);
     pointer-events: none;
 }
 
@@ -169,10 +169,6 @@ h1 {
 	text-align: center;
 }
 
-.links p > span {
-	display: block;
-}
-
 @media (min-width: 600px) {
 	.links p {
 		display: grid;
@@ -216,6 +212,6 @@ h1 {
 @media (prefers-color-scheme:dark) {
 	:root {
 		--cyan: #5decff;
-		--blue: #00b7ff;
+		--blue: #007cad;
 	}
 }
