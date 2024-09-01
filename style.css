@@ -179,6 +179,21 @@ body{
 	background-size: 400% 100%;
 }
 
+@media (min-width: 600px) {
+	.links p {
+		display: grid;
+		grid-template-columns: 12ch calc(100% - 12ch);
+		margin-left: 12px;
+		margin: 8px 0px;
+	}
+}
+
+@media (max-width: 940px) {
+	body {
+		margin-top: 0px;
+	}
+}
+
 @keyframes rainbow {
 	0%,
 	100% {
