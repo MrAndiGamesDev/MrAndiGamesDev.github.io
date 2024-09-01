@@ -21,10 +21,6 @@ body{
     pointer-events: none;
 }
 
-button{
-    opacity: 666;
-}
-
 .container nav{
     width: 100%;
     display: flex;
