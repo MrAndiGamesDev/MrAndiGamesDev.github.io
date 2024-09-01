@@ -45,9 +45,9 @@ body{
     letter-spacing: 4px;
 }
 
-.container nav h1 span{
+/* .container nav h1 span{
     color: #97e5ff;
-}
+} */
 
 .container nav ul{
     display: flex;
