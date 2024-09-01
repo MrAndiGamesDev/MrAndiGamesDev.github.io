@@ -1,0 +1,1 @@
+Cant fix the mobile for now i only modified for a bit to make a portfolio :(
