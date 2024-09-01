@@ -52,7 +52,7 @@ html, body{
 .button button{
     height: 60px;
     width: 210px;
-    border-radius: 50px;
+    border-radius: 20px;
 }
 
 .circle button{
