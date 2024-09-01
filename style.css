@@ -160,6 +160,38 @@ body{
     animation: animBack 6s linear infinite;
 }
 
+/* Animation code was kindly supplied by paradox - github.com/safinsingh */
+.gradient {
+	background: linear-gradient(
+		to right,
+		var(--cyan),
+		var(--blue),
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow 5s ease infinite;
+	background-size: 400% 100%;
+}
+
+@keyframes rainbow {
+	0%,
+	100% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 100% 0;
+	}
+}
+
+/* dark mode */
+@media (prefers-color-scheme:dark) {
+	:root {
+		--cyan: #6ef7f7;
+		--blue: #83a0f7;
+	}
+}
+
 @keyframes animBack {
     0%{
         top: -60px;
