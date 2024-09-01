@@ -45,9 +45,9 @@ body{
     letter-spacing: 4px;
 }
 
-/* .container nav h1 span{
+.container nav h1 span{
     color: #97e5ff;
-} */
+}
 
 .container nav ul{
     display: flex;
@@ -165,18 +165,12 @@ body{
     animation: animBack 6s linear infinite;
 }
 
-/* Animation code was kindly supplied by paradox - github.com/safinsingh */
-.gradient {
-	background: linear-gradient(
-		to right,
-		var(--cyan),
-		var(--blue),
-	);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	animation: rainbow 5s ease infinite;
-	background-size: 400% 100%;
+h1 {
+	text-align: center;
+}
+
+.links p > span {
+	display: block;
 }
 
 @media (min-width: 600px) {
@@ -194,6 +188,20 @@ body{
 	}
 }
 
+/* Animation code was kindly supplied by paradox - github.com/safinsingh */
+.gradient {
+	background: linear-gradient(
+		to right,
+		var(--cyan),
+		var(--blue),
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+	animation: rainbow 5s ease infinite;
+	background-size: 400% 100%;
+}
+
 @keyframes rainbow {
 	0%,
 	100% {
@@ -207,16 +215,7 @@ body{
 /* dark mode */
 @media (prefers-color-scheme:dark) {
 	:root {
-		--cyan: #6ef7f7;
-		--blue: #83a0f7;
+		--cyan: #5decff;
+		--blue: #00b7ff;
 	}
-}
-
-@keyframes animBack {
-    0%{
-        top: -60px;
-    }
-    100%{
-        top: 120%;
-    }
 }
