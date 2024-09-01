@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+:root {
+	--cyan: #5decff;
+	--blue: #00b7ff;
+}
+
 body{
     overflow: hidden;
     color: #fff;
