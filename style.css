@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-body{
+body {
     font-family: "Poppins";
     background-size: cover;
     background-position: center;
@@ -9,7 +9,7 @@ body{
     overflow: hidden;
 }
 
-.h1{
+.h1 {
     font-family: "Poppins";
     font-size: 20px;
     align-items: center;
@@ -19,7 +19,7 @@ body{
     text-align: center;
 }
 
-.button{
+.button {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -32,7 +32,7 @@ body{
     cursor: pointer;
 }
 
-.button2{
+.button2 {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
@@ -45,12 +45,12 @@ body{
     cursor: pointer;
 }
 
-.container{
+.container {
     height: 500px;
     margin: 150px auto;
 }
 
-.glass{
+.glass {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -60,8 +60,81 @@ body{
     background-size: cover;
 }
 
-.full-landing-image{
+.full-landing-image {
     width: 100%;
     height: 100vh;
     background-size: cover;
+}
+
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+#MyDisplay {
+    display: none;
+    text-align: center;
 }

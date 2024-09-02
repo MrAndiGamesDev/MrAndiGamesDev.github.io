@@ -16,21 +16,25 @@
     <title>Portfolio</title>
 </head>
 
-<body>
+<body onload="MyLoad()" style="margin:0;">
     <div class="full-landing-image">
-        <p><div class="h1">Portfolio</div></p>
-        <div class="container glass">
-            <div class="h1">Hi Im MrAndiGamesDev I Been Scripting for about ever now</div>
-            <div class="h1">Started using fusion and other framework to improve my plugin since 2024</div>
-            <div class="h1">i do work for my self and few games on roblox</div>
-            <a href="https://www.roblox.com/users/3362493084/profile">
-                <div class="button">My Roblox Profile</div>
-            </a>
+        <div id="loader"></div>
+        <div style="display:none;" id="MyDisplay" class="animate-bottom">
+            <p><div class="h1">Portfolio</div></p>
+            <div class="container glass">
+                <div class="h1">Hi Im MrAndiGamesDev I Been Scripting for about ever now</div>
+                <div class="h1">Started using fusion and other framework to improve my plugin since 2024</div>
+                <div class="h1">i do work for my self and few games on roblox</div>
+                <a href="https://www.roblox.com/users/3362493084/profile">
+                    <div class="button">My Roblox Profile</div>
+                </a>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
     <script src="index.js"></script>
+    <script src="load.js"></script>
 </body>
 
 </html>
