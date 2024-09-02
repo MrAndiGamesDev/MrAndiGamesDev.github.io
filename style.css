@@ -4,7 +4,7 @@ body{
     font-family: "Poppins";
     background-size: cover;
     background-position: center;
-    background: #333333;
+    background: #232323;
     align-items: center;
     overflow: hidden;
 }
@@ -27,6 +27,22 @@ body{
     background-size: cover;
     color: white;
     text-align: center;
+    margin: 350px 310px;
+    background-position: top;
+    cursor: pointer;
+}
+
+.button2{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    background-size: cover;
+    color: white;
+    text-align: center;
+    margin: 440px 600px;
+    background-position: top;
+    cursor: pointer;
 }
 
 .container{
