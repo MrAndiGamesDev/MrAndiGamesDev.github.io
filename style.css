@@ -18,15 +18,21 @@ body {
     text-align: center;
 }
 
+.buttoncontainer {
+    display: grid;
+    place-items: center;
+    height: 37.5px;
+    margin: 50px auto;
+}
+
 .button {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    background-size: cover;
+    background-size: 666px;
     color: white;
-    text-align: center;
-    background-position: top;
+    text-align: bottom;
     cursor: pointer;
 }
 
@@ -34,21 +40,11 @@ button:hover{
     color: whitesmoke;
 }
 
-.button2 {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    background-size: cover;
-    color: white;
-    text-align: center;
-    background-position: bottom;
-    cursor: pointer;
-}
-
 .container {
+    display: grid;
+    place-items: center;
     height: 500px;
-    margin: 150px auto;
+    margin: 50px auto;
 }
 
 .glass {
@@ -59,12 +55,6 @@ button:hover{
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     background-size: cover;
-}
-
-.button-container {
-    width: 100%;
-    height: 100vh;
-    cursor: none;
 }
 
 .full-landing-image {
@@ -108,6 +98,7 @@ button:hover{
     }
 }
 
+/* Add animation to "page content" */
 .animate-bottom {
     position: relative;
     -webkit-animation-name: animatebottom;

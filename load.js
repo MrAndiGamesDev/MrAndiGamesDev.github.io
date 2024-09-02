@@ -1,7 +1,7 @@
-var MyLoadVar;
+var LoadFree;
 
 function MyLoad() {
-  MyLoadVar = setTimeout(showPage, 3000);
+  LoadFree = setTimeout(showPage, 3000);
 }
 
 function showPage() {
