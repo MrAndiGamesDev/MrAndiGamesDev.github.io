@@ -7,6 +7,7 @@ body {
     background: #232323;
     align-items: center;
     overflow: hidden;
+    cursor: none;
 }
 
 .h1 {
@@ -15,7 +16,6 @@ body {
     align-items: center;
     color: white;
     background-position: center;
-    cursor: none;
     text-align: center;
 }
 
