@@ -44,8 +44,7 @@ button:hover{
     background-size: cover;
     color: white;
     text-align: center;
-    margin: 280px 310px;
-    background-position: top;
+    background-position: bottom;
     cursor: pointer;
 }
 
