@@ -8,6 +8,8 @@
 
 body {
   font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
   background-size: cover;
   background-position: center;
   background: #232323;
@@ -30,10 +32,21 @@ body {
 }
 
 .buttoncontainer {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: rgba(255, 255, 255, 0.18);
   display: grid;
   place-items: center;
-  height: 37.5px;
-  margin: 50px auto;
+  margin: 100px auto;
+}
+
+section {
+  height: 30px;
+  display: block;
+  unicode-bidi: isolate;
 }
 
 .button {
@@ -48,7 +61,7 @@ body {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
     background: rgba(255, 255, 255, 0.18);;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
     font-size: 18px;
     font-family: "Raleway", sans-serif;
     margin: 5px
@@ -95,6 +108,11 @@ body {
   filter: blur(2px);
 }
 
+#MyDisplay {
+  display: none;
+  text-align: center;
+}
+
 @keyframes animate {
   0% {
     background-position: 0 0;
@@ -136,7 +154,7 @@ body {
   background-size: cover;
 }
 
-#loader {
+#Loader {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -202,9 +220,4 @@ body {
     bottom: 0;
     opacity: 1;
   }
-}
-
-#MyDisplay {
-  display: none;
-  text-align: center;
 }
