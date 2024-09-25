@@ -5,7 +5,7 @@
 - [ ] Well I like to play soccer, and to play video games.
 
 ## Whats My Liking About Friends?
-- [ ] I like to hang out with my friends and to talk with them. (sometimes if im not busy)
+- [ ] Well I like to hang out with my friends and to talk with them. (sometimes if im not busy)
 
 ## Whats My Favourate About Framework?
 - [ ] Well i Started using fusion and other framework to improve my game since 2024
