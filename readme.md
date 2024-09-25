@@ -5,4 +5,4 @@
 - [ ] Well I like to play soccer, and to play video games.
 
 ## Whats My Liking About Friends?
-- [ ] I like to hang out with my friends and to talk with them.
+- [ ] I like to hang out with my friends and to talk with them. (sometimes if im not busy)
