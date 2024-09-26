@@ -1,5 +1,5 @@
 :root {
-    --background-color: #555555;
+    --background-color: linear-gradient(-45deg, #838383, #6d6d6d, #4e4e4e, #2b2b2b);
     --text-color: #ffffff;
 }
 
@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    animation: gradient 15s ease infinite;
 }
 
 .container {
@@ -36,4 +37,16 @@ a:hover {
 
 p {
     text-align: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
