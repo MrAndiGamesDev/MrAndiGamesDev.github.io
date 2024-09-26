@@ -4,19 +4,17 @@
     --gradient-color-3: #23a6d5;
     --gradient-color-4: #23d5ab;
 
-    --text-color: gray
+    --text-color: #ffffff
 }
 
 body {
     background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
-    background-size: cover;
-    color: var(--text-color);
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-size: 400% 400%;
+    color:  var(--text-color);
+    animation: gradient 15s ease infinite;
     height: 100vh;
     margin: 0;
     padding: 0;
-    animation: gradient 15s ease infinite;
 }
 
 .container {
