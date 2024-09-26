@@ -1,10 +1,10 @@
 :root {
-    --gradient-color-1: #ee7752;
-    --gradient-color-2: #e73c7e;
-    --gradient-color-3: #23d5ab;
-    --gradient-color-4: #00f7ff;
+    --gradient-color-1: #999999;
+    --gradient-color-2: #707070;
+    --gradient-color-3: #404040;
+    --gradient-color-4: #000000;
 
-    --text-color: #000000;
+    --text-color: #ffffff;
 }
 
 body {
