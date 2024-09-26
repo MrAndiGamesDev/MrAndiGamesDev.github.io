@@ -1,6 +1,10 @@
 :root {
-    --background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    --text-color: #6d6d6d;
+    --gradient-color-1: #ee7752;
+    --gradient-color-2: #e73c7e;
+    --gradient-color-3: #23a6d5;
+    --gradient-color-4: #23d5ab;
+
+    --text-color: gray
 }
 
 body {
