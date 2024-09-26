@@ -1,15 +1,18 @@
 :root {
-    --text-color: #ffffff;
+    --background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    --text-color: #6d6d6d;
 }
 
 body {
-    background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
+    background-size: cover;
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    animation: gradient ease infinite;
-    animation-duration: 5s;
+    animation: gradient 15s ease infinite;
 }
 
 .container {
