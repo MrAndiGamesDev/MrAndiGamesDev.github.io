@@ -19,10 +19,7 @@ body {
 }
 
 .copyrightcontainer {
-    text-align: center;
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 a {
