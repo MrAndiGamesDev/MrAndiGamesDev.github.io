@@ -1,19 +1,10 @@
 :root {
-    --gradient-color-1: #999999;
-    --gradient-color-2: #707070;
-    --gradient-color-3: #404040;
-    --gradient-color-4: #000000;
-
+    --background-color: #383838;
     --text-color: #ffffff;
 }
 
 body {
-    background: linear-gradient(-45deg,
-        var(--gradient-color-1),
-        var(--gradient-color-2),
-        var(--gradient-color-3),
-        var(--gradient-color-4)
-    );
+    background: var(--background-color);
     background-size: 400% 400%;
     color: var(--text-color);
     font-family: Arial, sans-serif;
@@ -48,16 +39,4 @@ a:hover {
 
 p {
     text-align: center;
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
 }
