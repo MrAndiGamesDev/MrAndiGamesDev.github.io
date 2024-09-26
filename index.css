@@ -1,17 +1,25 @@
 :root {
     --gradient-color-1: #ee7752;
     --gradient-color-2: #e73c7e;
-    --gradient-color-3: #23a6d5;
-    --gradient-color-4: #23d5ab;
+    --gradient-color-3: #23d5ab;
+    --gradient-color-4: #00f7ff;
 
     --text-color: #ffffff
+    --text-font: Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(-45deg, var(--gradient-color-1), var(--gradient-color-2), var(--gradient-color-3), var(--gradient-color-4));
+    background: linear-gradient(-45deg,
+        var(--gradient-color-1),
+        var(--gradient-color-2),
+        var(--gradient-color-3),
+        var(--gradient-color-4)
+    );
     background-size: 400% 400%;
     color:  var(--text-color);
-    animation: gradient 16s ease infinite;
+    font-family: var(--text-font);
+    animation: gradient 15s ease infinite;
+    overflow: hidden;
     height: 100vh;
     margin: 0;
     padding: 0;
