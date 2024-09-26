@@ -18,6 +18,13 @@ body {
     margin: 0 auto;
 }
 
+.copyrightcontainer {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 20px;
+}
+
 a {
     font-size: 0.9rem;
     color: #66ccff;
@@ -30,9 +37,6 @@ a:hover {
     text-decoration: underline;
 }
 
-.copyrightcontainer {
+p {
     text-align: center;
-    font-size: 0.8rem;
-    color: #999;
-    margin-top: 20px;
 }
