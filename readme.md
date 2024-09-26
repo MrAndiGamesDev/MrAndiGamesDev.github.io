@@ -11,7 +11,7 @@
 - [ ] Well i Started using fusion and other framework to improve my game since 2024
 
 ## Whats My Life Been Doing?
-- [ ] Well Pretty Good Untill last year i been dianosed since last summer of 2023 sadly but im ok now
+- [ ] Well Pretty Good Untill last year was dianosed with diabetes since last summer of 2023 sadly but im ok now
 
 ## Whats My Favourate About Framework?
 - [ ] Well i Started using fusion and other framework to improve my game since 2024

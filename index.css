@@ -1,11 +1,9 @@
 :root {
-    --background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     --text-color: #ffffff;
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
