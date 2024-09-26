@@ -4,7 +4,7 @@
     --gradient-color-3: #23d5ab;
     --gradient-color-4: #00f7ff;
 
-    --text-color: #868686;
+    --text-color: #000000;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
         var(--gradient-color-4)
     );
     background-size: 400% 400%;
-    color:  var(--text-color);
+    color: var(--text-color);
     font-family: Arial, sans-serif;
     animation: gradient 15s ease infinite;
     overflow: hidden;
