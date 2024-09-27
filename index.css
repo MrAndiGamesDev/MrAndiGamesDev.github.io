@@ -1,20 +1,21 @@
 body {
-    background-color: #868686;
+    background-color: #585858;
     font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #ffffff;
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
 .container {
-    background-color: #505050;
+    background-color: #2b2b2b;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
 }
 
-h1, h2 {
+h1, h2, a{
     justify-content: center;
     color: #ffffff;
 }
@@ -45,4 +46,8 @@ h1, h2 {
     margin-top: 20px;
     font-size: 0.9em;
     color: #7f8c8d;
+}
+
+p {
+    color: white;
 }
