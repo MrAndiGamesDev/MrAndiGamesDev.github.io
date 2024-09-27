@@ -37,7 +37,9 @@ h1, h2, h3{
     gap: 20px;
 }
 
-.social-links, a {
+.social-links{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     color: #3498db;
     text-align: center;
