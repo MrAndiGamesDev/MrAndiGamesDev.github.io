@@ -1,4 +1,5 @@
 body {
+    background-color: #868686;
     font-family: Arial, sans-serif;
     line-height: 1.6;
     max-width: 800px;
@@ -14,6 +15,7 @@ body {
 }
 
 h1, h2 {
+    justify-content: center;
     color: #ffffff;
 }
 
