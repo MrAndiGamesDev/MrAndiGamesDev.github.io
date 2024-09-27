@@ -15,7 +15,8 @@ body {
     margin-bottom: 20px;
 }
 
-h1, h2, a{
+h1, h2, h3{
+    text-align: center;
     justify-content: center;
     color: #ffffff;
 }
@@ -36,9 +37,10 @@ h1, h2, a{
     gap: 20px;
 }
 
-.social-links a {
+.social-links, a {
     text-decoration: none;
     color: #3498db;
+    text-align: center;
 }
 
 .copyrightcontainer {
@@ -49,5 +51,7 @@ h1, h2, a{
 }
 
 p {
+    justify-content: center;
+    text-align: center;
     color: white;
 }
