@@ -1,3 +1,7 @@
+:root {
+    --background-blur: 1.5rem;
+}
+
 body {
     background-color: #292929;
     font-family: Arial, sans-serif;
@@ -35,8 +39,8 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    -webkit-backdrop-filter: blur(1.15rem);
-    backdrop-filter: blur(1.5rem);
+    -webkit-backdrop-filter: blur(var(--background-blur));
+    backdrop-filter: blur(var(--background-blur));
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     padding: 20px;
