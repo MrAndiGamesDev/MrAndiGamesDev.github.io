@@ -42,8 +42,6 @@ body {
     -webkit-backdrop-filter: blur(var(--background-blur));
     backdrop-filter: blur(var(--background-blur));
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
-    padding: 20px;
     margin-bottom: 20px;
     background: #9f9f9f;
     background: linear-gradient(to right bottom,
@@ -52,7 +50,6 @@ body {
     );
     justify-content: center;
     align-items: center;
-    border-radius: 1.5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
 }
 
