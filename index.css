@@ -35,19 +35,17 @@ body {
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1.15rem);
+    backdrop-filter: blur(1.5rem);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
     background: #9f9f9f;
-    background: linear-gradient(
-        to right bottom,
+    background: linear-gradient(to right bottom,
         rgba(255, 255, 255, 0.2),
         rgba(255, 255, 255, 0.2)
     );
-    backdrop-filter: blur(1rem);
     justify-content: center;
     align-items: center;
     border-radius: 1.5rem;
@@ -96,7 +94,6 @@ h1, h2, h3{
     text-align: center;
     margin-top: 20px;
     font-size: 0.9em;
-    color: #7f8c8d;
 }
 
 p {
