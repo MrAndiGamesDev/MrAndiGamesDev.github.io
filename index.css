@@ -65,13 +65,14 @@ a {
 
 a:hover {
     text-decoration: underline;
-    color: lightgray
+    color: lightgray;
+    transition: color 0.2s ease-in-out;
 }
 
 h1, h2, h3 {
     text-align: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--text-color);
 }
 
 .projects {
@@ -89,7 +90,6 @@ h1, h2, h3 {
     display: flex;
     justify-content: center;
     text-decoration: none;
-    color: #3498db;
     text-align: center;
     gap: 20px;
 }
