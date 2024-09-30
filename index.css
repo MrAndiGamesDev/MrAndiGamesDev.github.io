@@ -43,19 +43,17 @@ body {
 .container {
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     -webkit-backdrop-filter: blur(var(--background-blur));
     backdrop-filter: blur(var(--background-blur));
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-bottom: 20px;
-    background: var(--background-container-color);
     background: linear-gradient(to right bottom,
         var(--background-color-gradient),
         var(--background-color-gradient)
     );
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    animation: glow 1s ease-in-out infinite alternate;
 }
 
 a {
@@ -68,7 +66,6 @@ a {
 a:hover {
     text-decoration: underline;
     color: lightgray
-    
 }
 
 h1, h2, h3 {
@@ -107,4 +104,13 @@ p {
     justify-content: center;
     text-align: center;
     color: var(--text-color);
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 2px #c0c0c0, 0 0 4px #c0c0c0, 0 0 6px #6d6d6d, 0 0 8px #6d6d6d, 0 0 10px #6d6d6d, 0 0 12px #6d6d6d, 0 0 14px #6d6d6d;
+    }
+    to {
+        box-shadow: 0 0 4px #c0c0c0, 0 0 8px #c0c0c0, 0 0 12px #6d6d6d, 0 0 16px #6d6d6d, 0 0 20px #6d6d6d, 0 0 24px #6d6d6d, 0 0 30px #6d6d6d;
+    }
 }
