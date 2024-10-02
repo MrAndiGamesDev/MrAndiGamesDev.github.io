@@ -1,12 +1,14 @@
-function SmoothScroll(Anchor){
-    Anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+function AutoSmoothScroll(Anchor){
+    Anchor.addEventListener('click', function (eeeeee) {
+        eeeeee.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
         });
     });
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(Anchor => {
-    SmoothScroll(Anchor)
+    AutoSmoothScroll(Anchor)
 });
