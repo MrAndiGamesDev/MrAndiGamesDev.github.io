@@ -18,3 +18,6 @@
 
 ## Did my plugin Stopped updating?
 - [ ] Well yes Sadly my plugin has stopped updated because i stopped working on it
+
+## Did my main windows pc broke
+- [ ] Well yes while i was dual booting on arch btw
