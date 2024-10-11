@@ -1,8 +1,7 @@
 // Create and show a custom offline alert
 function showOfflineAlert() {
   const alertBox = document.createElement('div');
-  alertBox.className = 'custom-alert';
-  alertBox.innerHTML = `
+  const alertstyles = `
   <div class="custom-alert">
     <div class="alert-content">
         <p>This website requires an internet connection. Please check your internet connection and try again.</p>
@@ -10,6 +9,9 @@ function showOfflineAlert() {
     </div>
   </div>
   `;
+  alertBox.type = "text/css";
+  alertBox.className = 'custom-alert';
+  alertBox.innerHTML = alertstyles;
   document.body.appendChild(alertBox);
 }
 
@@ -23,13 +25,6 @@ function checkOnlineStatus() {
     document.body.classList.remove("offline");
   }
 }
-
-// Check online status when the page loads
-window.addEventListener("load", checkOnlineStatus);
-
-// Also check when the online/offline status changes
-window.addEventListener("online", checkOnlineStatus);
-window.addEventListener("offline", checkOnlineStatus);
 
 // Add styles for the custom alert
 const styles = `
@@ -74,4 +69,12 @@ const styles = `
 const styleSheet = document.createElement("style");
 styleSheet.type = "text/css";
 styleSheet.innerText = styles;
+
+// Check online status when the page loads
+window.addEventListener("load", checkOnlineStatus);
+
+// Also check when the online/offline status changes
+window.addEventListener("online", checkOnlineStatus);
+window.addEventListener("offline", checkOnlineStatus);
+
 document.head.appendChild(styleSheet);
