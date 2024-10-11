@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+function init() {
     const projects = [
         {
             title: "Roblox Group",
@@ -15,9 +15,18 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const links = [
-        { text: "Discord Server", url: "https://discord.gg/VV6njGz7Br" },
-        { text: "Roblox Profile", url: "https://www.roblox.com/users/3362493084/profile" },
-        { text: "Roblox Group", url: "https://www.roblox.com/groups/17082880/MrAndi-Games" }
+        {
+            text: "Discord Server",
+            url: "https://discord.gg/VV6njGz7Br"
+        },
+        {
+            text: "Roblox Profile",
+            url: "https://www.roblox.com/users/3362493084/profile"
+        },
+        {
+            text: "Roblox Group",
+            url: "https://www.roblox.com/groups/17082880/MrAndi-Games"
+        }
     ];
 
     function createProjectElement(project) {
@@ -48,8 +57,16 @@ document.addEventListener('DOMContentLoaded', function() {
         linksContainer.appendChild(createLinkElement(link));
     });
 
+    Anchor.addEventListener('click', function (bozo) {
+        bozo.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    });
     checkOnlineStatus();
-});
+}
 
 function checkOnlineStatus() {
     const isOffline = !navigator.onLine;
@@ -66,5 +83,21 @@ function checkOnlineStatus() {
     }
 }
 
+function AutoSmoothScroll(Anchor){
+    Anchor.addEventListener('click', function(bozo) {
+        bozo.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+            inline: 'nearest'
+        });
+    });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(Anchor => {
+    AutoSmoothScroll(Anchor)
+});
+
+document.addEventListener('DOMContentLoaded', init);
 window.addEventListener("online", checkOnlineStatus);
 window.addEventListener("offline", checkOnlineStatus);
