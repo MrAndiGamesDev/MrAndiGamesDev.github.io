@@ -56,15 +56,7 @@ function init() {
     links.forEach(link => {
         linksContainer.appendChild(createLinkElement(link));
     });
-
-    Anchor.addEventListener('click', function (bozo) {
-        bozo.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start',
-            inline: 'nearest'
-        });
-    });
+    
     checkOnlineStatus();
 }
 
