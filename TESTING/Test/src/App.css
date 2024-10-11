@@ -1,0 +1,103 @@
+:root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  --background-blur: 1.5rem;
+  --background-color-gradient: rgba(255, 255, 255, 0.115);
+  --background-color: #292929;
+  --background-container-color: #505050;
+  --button-text-color: white;
+  --text-color: white;
+}
+
+.reload {
+  display: block;
+  padding: 10px 20px;
+  background-color: #8b8b8b;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  -webkit-backdrop-filter: blur(var(--background-blur));
+  backdrop-filter: blur(var(--background-blur));
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.reload:hover {
+  background-color: #5b5b5b;
+}
+
+.reload:active {
+  background-color: #424242;
+}
+
+.container {
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(var(--background-blur));
+  backdrop-filter: blur(var(--background-blur));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-bottom: 20px;
+  background: linear-gradient(to right bottom,
+      var(--background-color-gradient),
+      var(--background-color-gradient)
+  );
+  justify-content: center;
+  align-items: center;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--button-text-color)
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.project {
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.mylinks {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  gap: 20px;
+}
+
+.copyrightcontainer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+p {
+  justify-content: center;
+  text-align: center;
+  color: var(--text-color);
+}
+
+@keyframes glow {
+  from {
+      box-shadow: 0 0 2px #c0c0c0, 0 0 4px #c0c0c0, 0 0 6px #6d6d6d, 0 0 8px #6d6d6d, 0 0 10px #6d6d6d, 0 0 12px #6d6d6d, 0 0 14px #6d6d6d;
+  }
+  to {
+      box-shadow: 0 0 4px #c0c0c0, 0 0 8px #c0c0c0, 0 0 12px #6d6d6d, 0 0 16px #6d6d6d, 0 0 20px #6d6d6d, 0 0 24px #6d6d6d, 0 0 30px #6d6d6d;
+  }
+}
