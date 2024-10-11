@@ -159,6 +159,63 @@ const bodystyle = `
         }
     }
 `;
+
+// Function to add smooth scrolling
+function addSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+// Function to add fade-in effect
+function addFadeInEffect() {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.container > *').forEach(element => {
+        element.classList.add('hidden');
+        observer.observe(element);
+    });
+}
+
+// Function to add smooth transitions
+function addSmoothTransitions() {
+    const style = document.createElement('style');
+    style.textContent = `
+        * {
+            transition: all 0.3s ease-in-out;
+        }
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    `;
+    document.head.appendChild(style);
+}
+
+// Initialize smooth effects
+function initSmoothEffects() {
+    addSmoothScroll();
+    addFadeInEffect();
+    addSmoothTransitions();
+}
+
+// Call the initialization function when the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', initSmoothEffects);
 style.textContent = bodystyle;
 document.head.appendChild(style);
 
