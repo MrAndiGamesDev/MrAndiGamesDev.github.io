@@ -48,8 +48,6 @@ display_loading() {
 checkos
 display_loading
 sleep 2
-echo "Checking internet connection..."
-sleep 2
 clear
 sleep 2
 
