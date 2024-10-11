@@ -1,3 +1,18 @@
+function checkOnlineStatus() {
+    const isOffline = !navigator.onLine;
+    const offlineAlert = document.getElementById('offlineAlert');
+    const onlineContent = document.getElementById('onlineContent');
+
+    if (isOffline) {
+        offlineAlert.classList.remove('hidden');
+        onlineContent.classList.add('hidden');
+        offlineAlert();
+    } else {
+        offlineAlert.classList.add('hidden');
+        onlineContent.classList.remove('hidden');
+    }
+}
+
 function init() {
     const projects = [
         {
@@ -56,23 +71,8 @@ function init() {
     links.forEach(link => {
         linksContainer.appendChild(createLinkElement(link));
     });
-    
+
     checkOnlineStatus();
-}
-
-function checkOnlineStatus() {
-    const isOffline = !navigator.onLine;
-    const offlineAlert = document.getElementById('offlineAlert');
-    const onlineContent = document.getElementById('onlineContent');
-
-    if (isOffline) {
-        offlineAlert.classList.remove('hidden');
-        onlineContent.classList.add('hidden');
-        offlineAlert();
-    } else {
-        offlineAlert.classList.add('hidden');
-        onlineContent.classList.remove('hidden');
-    }
 }
 
 function AutoSmoothScroll(Anchor){
