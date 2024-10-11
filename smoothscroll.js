@@ -1,6 +1,6 @@
 function AutoSmoothScroll(Anchor){
-    Anchor.addEventListener('click', function (eeeeee) {
-        eeeeee.preventDefault();
+    Anchor.addEventListener('click', function (bozo) {
+        bozo.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth',
             block: 'start',

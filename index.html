@@ -10,10 +10,10 @@
     <meta name="author" content="MrAndiGamesDev(MrAndiScripted)">
     <title>Portfolio</title>
 </head>
-<body onload="checkOnlineStatus()">
-    <div class="offline"></div>
+<body>
+    <div id="offlineAlert" class="hidden"></div>
 
-    <div class="online">
+    <div id="onlineContent" class="hidden">
         <div class="load"></div>
         <div class="container">
             <h1>MrAndiGamesDev's Portfolio</h1>
@@ -24,33 +24,22 @@
         
             <h2>My Projects</h2>
         
-            <div class="projects">
-                <div class="project">
-                    <h3>Roblox Group: MrAndi Games</h3>
-                    <p>A collaborative space for game development and community engagement.</p>
-                    <a href="https://www.roblox.com/groups/17082880/MrAndi-Games">Visit Group</a>
-                </div>
-                <div class="project">
-                    <h3>Upcoming Projects</h3>
-                    <p>Stay tuned for exciting new Roblox games and experiences!</p>
-                    <a href="https://www.roblox.com/games/12430041994/Gravity-But-With-Sword-Fight-In-Dev">Gravity But With Sword Fight In Dev</a>
-                </div>
+            <div id="projectsContainer" class="projects">
+                <!-- Projects will be dynamically inserted here -->
             </div>
         
             <h2>Connect With Me</h2>
-                <div class="mylinks">
-                    <a href="https://discord.gg/VV6njGz7Br">Discord Server</a>
-                    <a href="https://www.roblox.com/users/3362493084/profile">Roblox Profile</a>
-                    <a href="https://www.roblox.com/groups/17082880/MrAndi-Games">Roblox Group</a>
-                </div>
+            <div id="linksContainer" class="mylinks">
+                <!-- Links will be dynamically inserted here -->
             </div>
-            <div class="copyrightcontainer">
-                <h2>Made with love by MrAndiGamesDev(MrAndiScripted)</h2>
-            </div>
+        </div>
+        <div class="copyrightcontainer">
+            <h2>Made with love by MrAndiGamesDev(MrAndiScripted)</h2>
         </div>
     </div>
     
     <script src="detectinternet.js"></script>
     <script src="smoothscroll.js"></script>
+    <script src="window.js"></script>
 </body>
 </html>
