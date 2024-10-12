@@ -1,17 +1,19 @@
 # Checks if The Os Detected
 checkos() {
-    local operatingsystem=arch
-    if [ -f /etc/${operatingsystem}-release ]; then
-        echo "Arch Btw detected"
-        return 0
-    else
-        echo "Not running on Arch Btw"
-        sleep 3
-        echo "Exiting..."
-        sleep 2
-        exit
-        return 1
-    fi
+    local operatingsystem=arch ubuntu debian
+    for os in "$operatingsystem"; do
+        if [ -f /etc/${os}-release ]; then
+            echo "$os detected!"
+            return 0
+        else
+            echo "Not running on $os"
+            sleep 3
+            echo "Exiting..."
+            sleep 2
+            exit
+            return 1
+        fi
+    done
 }
 
 # Function to display the loading animation
@@ -21,8 +23,8 @@ display_loading() {
     local width=68
     local progress=0
     local step=$((width / duration))
-    local spinner=('|' '/' '-' '\')
     local spin_index=0
+    local spinner=('|' '/' '-' '\')
 
     echo -ne "\033[?25l"  # Hide cursor
 
@@ -44,13 +46,6 @@ display_loading() {
     echo -ne "\033[?25h"  # Show cursor
 }
 
-# Main script
-checkos
-display_loading
-sleep 2
-clear
-sleep 2
-
 # Function to open the browser with index.html
 open_browser() {
     local index_path="index.html"
@@ -67,7 +62,16 @@ open_browser() {
     fi
 }
 
-# Call the function to open the browser
-open_browser
-sleep 2
-echo "Done"
+init() {
+    echo "Running update command..."
+    checkos
+    display_loading
+    sleep 2
+    clear
+    sleep 1
+    echo "Done"
+    sleep 2
+    open_browser
+}
+
+init

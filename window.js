@@ -1,3 +1,23 @@
+// Add responsive styles
+const style = document.createElement('style');
+const bodystyle = `
+    @media (max-width: 600px) {
+        body {
+            font-size: 14px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        .project, .mylinks a {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+`;
+
 function checkOnlineStatus() {
     const isOffline = !navigator.onLine;
     const offlineAlert = document.getElementById('offlineAlert');
@@ -99,14 +119,6 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
-// Apply smooth scroll to all anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        smoothScroll(this.getAttribute('href'), 1000);
-    });
-});
-
 // Smooth fade-in effect for page elements
 function fadeInElements() {
     const elements = document.querySelectorAll('.container > *');
@@ -135,30 +147,6 @@ function adjustLayout() {
         linksContainer.style.flexDirection = 'row';
     }
 }
-
-// Call adjustLayout on page load and window resize
-window.addEventListener('load', adjustLayout);
-window.addEventListener('resize', adjustLayout);
-
-// Add responsive styles
-const style = document.createElement('style');
-const bodystyle = `
-    @media (max-width: 600px) {
-        body {
-            font-size: 14px;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        h2 {
-            font-size: 20px;
-        }
-        .project, .mylinks a {
-            width: 100%;
-            margin-bottom: 15px;
-        }
-    }
-`;
 
 // Function to add smooth scrolling
 function addSmoothScroll() {
@@ -193,7 +181,7 @@ function addSmoothTransitions() {
     const style = document.createElement('style');
     style.textContent = `
         * {
-            transition: all 0.3s ease-in-out;
+            transition: all 0.4s ease-in-out;
         }
         .fade-in {
             opacity: 1;
@@ -213,6 +201,18 @@ function initSmoothEffects() {
     addFadeInEffect();
     addSmoothTransitions();
 }
+
+// Call adjustLayout on page load and window resize
+window.addEventListener('load', adjustLayout);
+window.addEventListener('resize', adjustLayout);
+
+// Apply smooth scroll to all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        smoothScroll(this.getAttribute('href'), 1000);
+    });
+});
 
 // Call the initialization function when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initSmoothEffects);
