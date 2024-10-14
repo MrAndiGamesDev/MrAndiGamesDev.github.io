@@ -1,5 +1,4 @@
 // Add responsive styles
-const style = document.createElement('style');
 const bodystyle = `
     @media (max-width: 600px) {
         body {
@@ -17,6 +16,8 @@ const bodystyle = `
         }
     }
 `;
+
+const style = document.createElement('style');
 
 function checkOnlineStatus() {
     const isOffline = !navigator.onLine;
