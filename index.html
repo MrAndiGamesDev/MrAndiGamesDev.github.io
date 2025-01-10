@@ -8,271 +8,210 @@
     <style>
         /* Global Styles */
         body {
-            font-family: 'Arial', sans-serif; /* Font style for the page */
-            background-color: #f4f4f9; /* Light background color */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-            box-sizing: border-box; /* Ensure padding and borders don't affect layout */
-            color: #333; /* Text color */
-            transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
         }
 
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, #6A2C92, #9B55D9); /* Gradient background */
-            padding: 10px 20px; /* Padding for the header */
-            color: white; /* Text color */
-            text-align: center; /* Center text alignment */
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Shadow for header */
+            background: linear-gradient(135deg, #6A2C92, #9B55D9);
+            padding: 10px 20px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
-        /* Navigation Bar Styles */
+        /* Navbar Styles */
         nav {
-            background-color: #5B1E8E; /* Purple background for navigation */
-            display: flex; /* Flexbox for layout */
-            justify-content: center; /* Center items horizontally */
-            align-items: center; /* Center items vertically */
-            padding: 15px 0; /* Padding for the navigation */
-            position: sticky; /* Keep nav at the top on scroll */
-            top: 0; /* Stick to the top */
-            z-index: 10; /* Ensure nav stays on top */
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            background-color: #5B1E8E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Navigation Links Styles */
         nav a {
-            color: white; /* Text color for links */
-            padding: 15px 25px; /* Padding for the links */
-            text-decoration: none; /* Remove underline */
-            font-size: 1.1rem; /* Font size */
-            margin: 0 20px; /* Space between links */
-            border-radius: 25px; /* Rounded corners for links */
-            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin: 0 20px;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        /* Navigation Links Hover Effect */
         nav a:hover {
-            background-color: #7A2A98; /* Hover background color */
-            transform: scale(1.1); /* Slight zoom effect on hover */
+            background-color: #7A2A98;
+            transform: scale(1.1);
         }
 
-        /* Main Content Area Styles */
+        /* Content Area Styles */
         .container {
-            width: 90%; /* Container width */
-            margin: 0 auto; /* Center the content */
-            padding: 40px 0; /* Padding for content */
-            text-align: center; /* Center text */
-            opacity: 0; /* Initially hidden */
-            transform: translateY(20px); /* Slide-in effect */
-            transition: opacity 1s ease, transform 1s ease; /* Smooth transitions */
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 0;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
         }
 
-        /* Make content visible when loaded */
         .container.visible {
-            opacity: 1; /* Make visible */
-            transform: translateY(0); /* Reset sliding effect */
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .container p {
-            font-size: 1.5rem; /* Font size for paragraphs */
-            max-width: 900px; /* Max width */
-            margin: 20px auto; /* Center paragraph with margin */
-            color: #555; /* Text color */
-            line-height: 1.6; /* Line height for readability */
+            font-size: 1.5rem;
+            max-width: 900px;
+            margin: 20px auto;
+            color: #555;
+            line-height: 1.6;
         }
 
-        /* Card Container Styles */
         .card-container {
-            display: grid; /* Grid layout */
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive columns */
-            gap: 20px; /* Space between cards */
-            justify-items: center; /* Center cards */
-            margin-top: 40px; /* Space above the cards */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            justify-items: center;
+            margin-top: 40px;
         }
 
-        /* Individual Card Styles */
         .card {
-            background-color: #fff; /* White background */
-            padding: 20px; /* Padding inside the card */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Image Styles in Cards */
         .card img {
-            width: 100%; /* Full width image */
-            border-radius: 10px; /* Rounded corners for images */
-            transition: transform 0.3s ease; /* Smooth transition for image scaling */
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
         }
 
-        /* Card Hover Effect */
         .card:hover {
-            transform: translateY(-10px); /* Slight lift effect */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
         }
 
-        /* Image Hover Effect */
         .card:hover img {
-            transform: scale(1.05); /* Scale image on hover */
+            transform: scale(1.05);
         }
 
-        /* Card Title Styles */
         .card h3 {
-            font-size: 1.5rem; /* Title font size */
-            margin: 15px 0; /* Margin around title */
-            color: #6A2C92; /* Title color */
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #6A2C92;
         }
 
-        /* Card Description Styles */
         .card p {
-            color: #777; /* Text color */
+            color: #777;
         }
 
-        /* Button Styles */
         .button {
-            display: inline-block; /* Inline button */
-            background-color: #6A2C92; /* Button background color */
-            color: white; /* Text color */
-            padding: 18px 40px; /* Padding inside button */
-            font-size: 1.2rem; /* Font size */
-            border: none; /* Remove border */
-            border-radius: 50px; /* Rounded corners */
-            text-decoration: none; /* Remove underline */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
+            display: inline-block;
+            background-color: #6A2C92;
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s ease, transform 0.3s ease;
         }
 
-        /* Button Hover Effect */
         .button:hover {
-            background-color: #9B55D9; /* Hover background color */
-            transform: translateY(-3px); /* Slight hover lift effect */
+            background-color: #9B55D9;
+            transform: translateY(-3px);
+        }
+
+        /* Blog Section Styles */
+        .blog-section {
+            margin-top: 80px;
+        }
+
+        .blog-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #6A2C92;
+            margin-bottom: 40px;
+        }
+
+        .blog-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .blog-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-card h3 {
+            color: #6A2C92;
+            font-size: 1.5rem;
+        }
+
+        .blog-card p {
+            color: #777;
+        }
+
+        .blog-card .read-more {
+            color: #6A2C92;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .blog-card .read-more:hover {
+            text-decoration: underline;
         }
 
         /* Footer Styles */
         footer {
-            background-color: #333; /* Dark footer background */
-            color: white; /* Text color */
-            text-align: center; /* Center text */
-            padding: 40px 20px; /* Padding inside footer */
-            position: relative; /* Position relative for layout */
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
         }
 
         footer a {
-            color: #9B55D9; /* Footer link color */
-            text-decoration: none; /* Remove underline from links */
-            margin: 0 10px; /* Space between footer links */
+            color: #9B55D9;
+            text-decoration: none;
+            margin: 0 10px;
         }
 
         footer a:hover {
-            text-decoration: underline; /* Underline on hover */
-        }
-
-        /* Testimonial Section Styles */
-        .testimonial-container {
-            margin-top: 60px; /* Margin above testimonial section */
-            padding: 40px 20px; /* Padding inside testimonial section */
-            background-color: #f9f9f9; /* Light background color */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
-        }
-
-        .testimonial-container h2 {
-            color: #6A2C92; /* Header color */
-            font-size: 2rem; /* Font size for testimonials title */
-            margin-bottom: 20px; /* Space below title */
-        }
-
-        .testimonial-card {
-            background-color: #fff; /* White background */
-            padding: 20px; /* Padding inside testimonial card */
-            border-radius: 10px; /* Rounded corners */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
-            margin-bottom: 20px; /* Space between testimonial cards */
-            transition: transform 0.3s ease; /* Smooth transition */
-        }
-
-        /* Testimonial Hover Effect */
-        .testimonial-card:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-        }
-
-        .testimonial-card p {
-            color: #777; /* Text color */
-            font-style: italic; /* Italicized text */
-        }
-
-        .testimonial-card h4 {
-            color: #6A2C92; /* Name color */
-            margin-top: 10px; /* Margin above name */
-        }
-
-        /* Features Section Styles */
-        .features-section {
-            margin-top: 80px; /* Margin above features section */
-        }
-
-        .features-section h2 {
-            text-align: center; /* Center the title */
-            font-size: 2rem; /* Font size for features title */
-            color: #6A2C92; /* Color for the title */
-            margin-bottom: 40px; /* Space below title */
-        }
-
-        .features-container {
-            display: grid; /* Grid layout for features */
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid */
-            gap: 30px; /* Space between feature cards */
-        }
-
-        .feature-card {
-            background-color: #fff; /* White background */
-            padding: 20px; /* Padding inside feature cards */
-            border-radius: 15px; /* Rounded corners */
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
-        }
-
-        .feature-card h3 {
-            color: #6A2C92; /* Title color */
-            font-size: 1.5rem; /* Font size */
-        }
-
-        .feature-card p {
-            color: #777; /* Text color */
-        }
-
-        /* Social Media Links Styles */
-        .social-links {
-            margin-top: 30px; /* Margin above social links */
-            display: flex; /* Flex layout for social links */
-            justify-content: center; /* Center the links */
-        }
-
-        .social-links a {
-            margin: 0 15px; /* Space between social media links */
-            font-size: 1.5rem; /* Font size */
-            color: #6A2C92; /* Link color */
-            transition: color 0.3s ease; /* Smooth color transition */
-        }
-
-        /* Social Links Hover Effect */
-        .social-links a:hover {
-            color: #9B55D9; /* Hover color */
+            text-decoration: underline;
         }
 
         /* Responsive Design for Smaller Screens */
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.8rem; /* Smaller header text */
-            }
-
             nav a {
-                font-size: 1rem; /* Smaller font size for nav links */
-                padding: 10px 20px; /* Smaller padding for links */
+                font-size: 1rem;
+                padding: 10px 20px;
             }
 
             .container p {
-                font-size: 1.3rem; /* Smaller font size for paragraphs */
+                font-size: 1.3rem;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -280,6 +219,9 @@
 <body>
 
 <header>
+    <a href="https://www.roblox.com" target="_blank">
+        <img src="https://raw.githubusercontent.com/MrAndiGamesDev/Roblox-Transaction-Application/refs/heads/main/Robux.png" alt="MrAndi Scripted's Logo" style="width: 50px; height: auto;">
+    </a>
     <h1>Welcome to MrAndi Scripted's Webpage</h1>
     <p>Explore our application</p>
 </header>
@@ -296,7 +238,7 @@
 
     <div class="card-container">
         <div class="card">
-            <img src="https://via.placeholder.com/300x200" alt="Roblox Transaction Image">
+            <img src="https://raw.githubusercontent.com/MrAndiGamesDev/Roblox-Transaction-Application/refs/heads/main/Robux.png" alt="Roblox Transaction Image">
             <h3>Roblox Transaction Monitor Application</h3>
             <p>Track your donations and expenses in real-time.</p>
         </div>
@@ -305,34 +247,37 @@
     <a href="#" class="button">Explore Our Features</a>
 </div>
 
-<!-- Features Section -->
-<div class="features-section">
-    <h2>Key Features</h2>
-    <div class="features-container">
-        <div class="feature-card">
-            <h3>Real-time Monitoring</h3>
-            <p>Get instant notifications when a transaction occurs.</p>
+<!-- Blog Section -->
+<div class="blog-section">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-container">
+        <div class="blog-card">
+            <h3>How to Set Up Roblox Transaction Monitor</h3>
+            <p>Learn how to easily set up the Roblox Transaction Monitor to start tracking your donations and expenses.</p>
+            <a href="#" class="read-more">Read More</a>
         </div>
-        <div class="feature-card">
-            <h3>Customizable Alerts</h3>
-            <p>Set up alerts based on your desired thresholds.</p>
+        <div class="blog-card">
+            <h3>Understanding Roblox Transaction Data</h3>
+            <p>Gain insights into the data from Roblox transactions and how to interpret it for better tracking.</p>
+            <a href="#" class="read-more">Read More</a>
         </div>
-        <div class="feature-card">
-            <h3>Easy-to-Use Interface</h3>
-            <p>Navigate through our application with ease and simplicity.</p>
+        <div class="blog-card">
+            <h3>How to Manage Your Roblox Budget</h3>
+            <p>Explore the best practices for managing your in-game finances using the Roblox Transaction Monitor.</p>
+            <a href="#" class="read-more">Read More</a>
         </div>
     </div>
 </div>
 
 <footer>
     <p>&copy; 2025 MrAndi Scripted's Webpage. All rights reserved.</p>
-    <p>Privacy Policy | Terms of Service</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
 </footer>
 
 <script>
     window.addEventListener('load', function() {
         const content = document.getElementById('main-content');
-        content.classList.add('visible'); /* Show content when page is loaded */
+        content.classList.add('visible');
     });
 </script>
 
