@@ -137,56 +137,48 @@
             transform: translateY(-3px);
         }
 
-        /* Features Section Styles */
-        .features-section {
+        /* Blog Section Styles */
+        .blog-section {
             margin-top: 80px;
         }
 
-        .features-section h2 {
+        .blog-section h2 {
             text-align: center;
             font-size: 2rem;
             color: #6A2C92;
             margin-bottom: 40px;
         }
 
-        .features-container {
+        .blog-container {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
         }
 
-        .feature-card {
+        .blog-card {
             background-color: #fff;
             padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .feature-card h3 {
+        .blog-card h3 {
             color: #6A2C92;
             font-size: 1.5rem;
         }
 
-        .feature-card p {
+        .blog-card p {
             color: #777;
         }
 
-        /* Social Media Links Styles */
-        .social-links {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .social-links a {
-            margin: 0 15px;
-            font-size: 1.5rem;
+        .blog-card .read-more {
             color: #6A2C92;
-            transition: color 0.3s ease;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        .social-links a:hover {
-            color: #9B55D9;
+        .blog-card .read-more:hover {
+            text-decoration: underline;
         }
 
         /* Footer Styles */
@@ -216,6 +208,10 @@
 
             .container p {
                 font-size: 1.3rem;
+            }
+
+            .blog-container {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -248,6 +244,28 @@
     <a href="#" class="button">Explore Our Features</a>
 </div>
 
+<!-- Blog Section -->
+<div class="blog-section">
+    <h2>Latest Blog Posts</h2>
+    <div class="blog-container">
+        <div class="blog-card">
+            <h3>How to Set Up Roblox Transaction Monitor</h3>
+            <p>Learn how to easily set up the Roblox Transaction Monitor to start tracking your donations and expenses.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h3>Understanding Roblox Transaction Data</h3>
+            <p>Gain insights into the data from Roblox transactions and how to interpret it for better tracking.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+        <div class="blog-card">
+            <h3>How to Manage Your Roblox Budget</h3>
+            <p>Explore the best practices for managing your in-game finances using the Roblox Transaction Monitor.</p>
+            <a href="#" class="read-more">Read More</a>
+        </div>
+    </div>
+</div>
+
 <footer>
     <p>&copy; 2025 MrAndi Scripted's Webpage. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
@@ -261,4 +279,4 @@
 </script>
 
 </body>
-</html>
+</html
