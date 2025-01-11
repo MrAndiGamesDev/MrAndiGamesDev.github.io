@@ -55,18 +55,13 @@ body {
     margin-left: 8px;
 }
 
-.hidden {
-    display: none;
-}
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-.button.loading {
-    pointer-events: none;
-    opacity: 0.8;
+.hidden {
+    display: none;
 }
 
 /* Fade-in Animation */
@@ -257,6 +252,74 @@ footer p {
     margin-bottom: 10px;
 }
 
+/* Button Styles */
+.shadcn-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: var(--button-background);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    overflow: hidden; /* Ensures the pulse effect stays within the button */
+}
+
+.shadcn-button:hover {
+    background-color: var(--button-hover-background);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.shadcn-button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.shadcn-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.4); /* Focus ring */
+}
+
+/* Adding a Discord-like "Pulse" Animation on Hover */
+.shadcn-button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(88, 101, 242, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: pulse 1s ease-out;  /* Removed infinite loop */
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.shadcn-button:hover:after {
+    opacity: 1;
+    animation: pulse 1s ease-out;  /* Runs once on hover */
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Footer Navigation */
 footer nav a {
     color: var(--link-color);
     text-decoration: none;
