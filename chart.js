@@ -67,6 +67,7 @@ async function loadChart() {
                         font: {
                             size: 18,
                             family: 'Arial, sans-serif',
+                            position: 'center',
                             weight: 'bold'
                         }
                     },
