@@ -12,9 +12,8 @@
 
 <header>
     <div class="header-container">
-        <h1>MrAndi Scripted's Webpage.</h1>
+        <h1>MrAndi Scripted's Webpage</h1>
         <p>Explore Our Roblox Transaction Monitor</p>
-        <!-- Theme Toggle -->
         <div class="theme-toggle">
             <label for="theme-switch" class="switch">
                 <input type="checkbox" id="theme-switch">
@@ -26,18 +25,27 @@
 </header>
 
 <main class="container" id="main-content">
+    <!-- Introduction Section -->
     <section class="intro-section">
-        <p>A Roblox Transaction Monitor is an open-source project that allows you to get notified when receiving donations or spending Robux. Stay updated with real-time notifications!</p>
+        <p>
+            A Roblox Transaction Monitor is an open-source project that allows you to get notified 
+            when receiving donations or spending Robux. Stay updated with real-time notifications!
+        </p>
     </section>
 
-    <!-- Chart Container -->
+    <!-- Chart Section -->
     <div class="chart-container fade-in">
         <canvas id="starsChart" width="600" height="300"></canvas>
     </div>
 
+    <!-- Cards Section -->
     <section class="card-container fade-in">
         <div class="card">
-            <img src="https://github.com/MrAndiGamesDev/Roblox-Transaction-Application/blob/main/Robux.png?raw=true" alt="Features Image" class="card-image">
+            <img 
+                src="https://github.com/MrAndiGamesDev/Roblox-Transaction-Application/blob/main/Robux.png?raw=true" 
+                alt="Features Image" 
+                class="card-image"
+            >
             <h2>Features</h2>
             <ul>
                 <li>Real-time notifications</li>
@@ -47,11 +55,15 @@
             </ul>
         </div>
 
-        <div class="card fade-in">
-            <img src="https://quinn9282.neocities.org/images/roblox.png" alt="Requirements Image" class="card-image">
+        <div class="card">
+            <img 
+                src="https://quinn9282.neocities.org/images/roblox.png" 
+                alt="Requirements Image" 
+                class="card-image"
+            >
             <h2>Requirements</h2>
             <ul>
-                <li>Windows 10 Or Windows 11</li>
+                <li>Windows 10 or Windows 11</li>
                 <li>Roblox Account</li>
                 <li>Internet Connection</li>
                 <li>Roblox App</li>
@@ -59,14 +71,17 @@
         </div>
     </section>
 
+    <!-- Download Button Section -->
     <div class="button-container fade-in">
-        <a href="https://www.mediafire.com/file/3e15dsdp1g6oko5/Roblox_Transaction_Monitor_V0.6.3.exe/file" class="button primary">Download Now</a>
+        <button id="download-button" class="button primary">
+            <span class="button-text">Download Now</span>
+            <span class="spinner hidden"></span>
+        </button>
     </div>
 </main>
 
-<!-- Footer Section -->
 <footer>
-    <div class="footer-container fade-in">
+    <div class="footer-container">
         <p>&copy; 2025 MrAndi Scripted's Webpage. All rights reserved.</p>
         <nav>
             <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
@@ -74,9 +89,11 @@
     </div>
 </footer>
 
+<!-- External JavaScript Files -->
 <script src="chart.js"></script>
 <script src="theme.js"></script>
 <script src="fade.js"></script>
+<script src="downloadbtn.js"></script>
 
 </body>
 </html>
