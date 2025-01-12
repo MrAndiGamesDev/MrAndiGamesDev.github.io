@@ -18,6 +18,6 @@ document.getElementById('download-button').addEventListener('click', function ()
 
     // Optionally, redirect to the download link
     setTimeout(() => {
-        window.location.href = "https://www.mediafire.com/file/gyih71ef5hnsxks/Roblox+Transaction+Monitor+Setup.exe/file";
+        window.location.href = "https://www.mediafire.com/file/gyih71ef5hnsxks/Roblox+Transaction+Monitor+Setup.exe";
     }, 500); // Ensure smooth transition before redirect
 });
