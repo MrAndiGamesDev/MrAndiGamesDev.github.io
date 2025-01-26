@@ -12,6 +12,10 @@
     <link rel="icon" href="https://raw.githubusercontent.com/MrAndiGamesDev/Roblox-Transaction-Application/refs/heads/main/Robux.png" type="image/png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        .button2 {
+            cursor: pointer;
+        }
+
         .button-icon {
             display: flex;
             align-items: center;
@@ -43,7 +47,7 @@
 
 <main class="container" id="main-content">
     <!-- Introduction Section -->
-    <button class="button button-icon">
+    <button class="button2 button-icon">
         <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="React Logo">
     </button>
 
@@ -113,28 +117,28 @@
 <script src="fade.js"></script>
 <script>
     document.getElementById('download-button').addEventListener('click', function () {
-    const button = this;
-    const spinner = button.querySelector('.spinner');
-    const buttonText = button.querySelector('.button-text');
+        const button = this;
+        const spinner = button.querySelector('.spinner');
+        const buttonText = button.querySelector('.button-text');
 
-    // Show spinner and disable button
-    button.classList.add('loading');
-    spinner.classList.remove('hidden');
-    buttonText.textContent = 'Loading...';
+        // Show spinner and disable button
+        button.classList.add('loading');
+        spinner.classList.remove('hidden');
+        buttonText.textContent = 'Loading...';
 
-    // Simulate a delay (e.g., file preparation)
-    setTimeout(() => {
-        // Revert button state after "download" is complete
-        button.classList.remove('loading');
-        spinner.classList.add('hidden');
-        buttonText.textContent = 'Download Now';
-    }, 5000); // Adjust timeout as needed
+        // Simulate a delay (e.g., file preparation)
+        setTimeout(() => {
+            // Revert button state after "download" is complete
+            button.classList.remove('loading');
+            spinner.classList.add('hidden');
+            buttonText.textContent = 'Download Now';
+        }, 5000); // Adjust timeout as needed
 
-    // Optionally, redirect to the download link
-    setTimeout(() => {
-        window.location.href = "https://www.mediafire.com/file/0js6vhzm1srq7ps/Roblox_Transaction_Monitor_V0.6.8.exe/file";
-    }, 500); // Ensure smooth transition before redirect
-});
+        // Optionally, redirect to the download link
+        setTimeout(() => {
+            window.location.href = "https://www.mediafire.com/file/0js6vhzm1srq7ps/Roblox_Transaction_Monitor_V0.6.8.exe/file";
+        }, 500); // Ensure smooth transition before redirect
+    });
 </script>
     
 </body>
